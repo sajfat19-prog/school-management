@@ -1,0 +1,2 @@
+function showMsg(name){const t=document.getElementById("toast");t.textContent="تم فتح قسم: "+name;t.style.display="block";clearTimeout(window.tt);window.tt=setTimeout(()=>t.style.display="none",1800)}
+function toggleSidebar(){document.querySelector(".sidebar").classList.toggle("open")}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>نظام إدارة المدرسة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">🎓</div>
+      <div><b>نظام المدرسة</b><small>لوحة تحكم الإدارة</small></div>
+    </div>
+    <div class="profile"><div class="avatar">👤</div><div><b>مدير المدرسة</b><small>مدير المدرسة</small></div></div>
+    <nav>
+      <a class="active" href="#"><span>⌂</span> الرئيسية</a>
+      <a href="#"><span>📖</span> الدرجات</a>
+      <a href="#"><span>👥</span> الطلاب</a>
+      <a href="#"><span>👨‍🏫</span> الكادر التدريسي</a>
+      <a href="#"><span>📅</span> الجدول الأسبوعي</a>
+      <a href="#"><span>📋</span> الغياب والحضور</a>
+      <a href="#"><span>📊</span> التقارير والإحصائيات</a>
+      <a href="#"><span>📁</span> الملفات والإعدادات</a>
+      <a href="#"><span>⚙️</span> الإعدادات</a>
+    </nav>
+    <div class="footer">🇮🇶 بالعلم نبني المستقبل</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="school-title">
+        <div class="school-logo">🏫</div>
+        <div><h2>متوسطة الرافدين للبنين</h2><p>المديرية العامة لتربية بغداد</p></div>
+      </div>
+      <div class="top-actions">
+        <span class="date">الأحد 21/09/2025<br><b>10:24 ص</b></span>
+        <span class="bell">🔔<i>3</i></span>
+        <button class="menu" onclick="toggleSidebar()">☰</button>
+      </div>
+    </header>
+
+    <section class="welcome">
+      <div><h1>أهلاً وسهلاً</h1><p>في لوحة التحكم الخاصة بالمدرسة</p></div>
+      <div class="search">🔎 <input placeholder="بحث عن طالب، مدرس أو سجل..."></div>
+    </section>
+
+    <section class="cards">
+      <div class="card blue" onclick="showMsg('الدرجات')"><span>📋</span><b>الدرجات</b><small>إدخال ومتابعة الدرجات</small></div>
+      <div class="card green" onclick="showMsg('الطلاب')"><span>👨‍👩‍👧</span><b>الطلاب</b><small>بيانات الطلاب والتسجيل</small></div>
+      <div class="card navy" onclick="showMsg('الكادر التدريسي')"><span>👨‍🏫</span><b>الكادر التدريسي</b><small>إدارة الكادر التعليمي</small></div>
+      <div class="card red" onclick="showMsg('الجدول الأسبوعي')"><span>📅</span><b>الجدول الأسبوعي</b><small>مواعيد الدروس</small></div>
+      <div class="card blue" onclick="showMsg('التقارير والإحصائيات')"><span>📊</span><b>التقارير والإحصائيات</b><small>تقارير شاملة للمدرسة</small></div>
+      <div class="card cyan" onclick="showMsg('الغياب والحضور')"><span>📝</span><b>الغياب والحضور</b><small>متابعة حضور الطلاب</small></div>
+      <div class="card orange" onclick="showMsg('الملفات والإعدادات')"><span>📁</span><b>الملفات والإعدادات</b><small>إدارة الملفات المدرسية</small></div>
+      <div class="card dark" onclick="showMsg('الإعدادات')"><span>⚙️</span><b>الإعدادات</b><small>ضبط النظام والتطبيق</small></div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-head"><h3>📢 الإعلانات والتنبيهات</h3><a href="#">عرض الكل</a></div>
+        <div class="notice"><span>📄</span><div><b>تم إضافة درجات الامتحان الشهري الأول</b><small>2025/09/21</small></div></div>
+        <div class="notice"><span>👥</span><div><b>مراجعة بيانات الطلاب قبل إغلاق السنة الدراسية</b><small>2025/09/18</small></div></div>
+        <div class="notice"><span>📅</span><div><b>اجتماع الهيئة التدريسية يوم الاثنين القادم</b><small>2025/09/15</small></div></div>
+        <div class="notice"><span>👨‍🏫</span><div><b>تحديث بيانات الكادر التدريسي في النظام</b><small>2025/09/12</small></div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>📅 الجدول الأسبوعي اليوم</h3></div>
+        <table>
+          <thead><tr><th>الدرس</th><th>الصف</th><th>الوقت</th></tr></thead>
+          <tbody>
+            <tr><td>اللغة العربية</td><td>الأول المتوسط</td><td>08:00 - 08:45</td></tr>
+            <tr><td>الرياضيات</td><td>الأول المتوسط</td><td>08:50 - 09:35</td></tr>
+            <tr><td>اللغة الإنكليزية</td><td>الأول المتوسط</td><td>09:50 - 10:35</td></tr>
+            <tr><td>العلوم</td><td>الأول المتوسط</td><td>10:40 - 11:25</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><small>عدد الطلاب الكلي</small><b>482</b></div>
+      <div><small>عدد الكادر التدريسي</small><b>36</b></div>
+      <div><small>عدد الشعب</small><b>16</b></div>
+      <div><small>نسبة الحضور اليوم</small><b>94%</b></div>
+    </section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
